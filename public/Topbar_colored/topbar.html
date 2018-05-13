@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="UTF-8">
+    <title>topbar</title>
+    <link href="./topbar.css" rel="stylesheet" />
+  </head>
+  <body>
+    <!--Your HTML here-->
+    <div style="position: fixed; top: 0; left: 0; width: 100%; height: 160px; background-color: #fa4e2d;">
+      <div style="max-width: 800px; height: 150px; overflow: scroll; margin-left: auto; margin-right: auto; margin-top: 0%">
+        <table>
+          <tr>
+            <th width="100"></th>
+            <th><img onclick='onTopClick(0)' id="0" src="assets/icons8-service_bell.png" alt="Categories"></th>
+            <th><img src="assets/icons8-forward_filled.png" alt=">"></th>
+            <th><img onclick='onTopClick(1)' id="1" src="assets/icons8-meal.png" alt="Menus"></th>
+            <th><img src="assets/icons8-forward_filled.png" alt=">"></th>
+            <th><img onclick='onTopClick(2)' id="2" src="assets/icons8-restaurant_building.png" alt="Brand"></th>
+            <th><img src="assets/icons8-forward_filled.png" alt=">"></th>
+            <th><img onclick='onTopClick(3)' id="3" src="assets/icons8-shopping_cart_filled.png" alt="Cart"></th>
+            <th><img src="assets/icons8-forward_filled.png" alt=">"></th>
+            <th><img onclick='onTopClick(4)' id="4" src="assets/icons8-marker.png" alt="Location"></th>
+            <th><img src="assets/icons8-forward_filled.png" alt=">"></th>
+            <th><img onclick='onTopClick(5)' id="5" src="assets/icons8-bank_cards.png" alt="Payment"></th>
+            <th><img src="assets/icons8-forward_filled.png" alt=">"></th>
+            <th><img onclick='onTopClick(6)' id="6" src="assets/icons8-indeterminate_checkbox.png" alt="Pending"></th>
+            <th width="100"></th>
+          </tr>
+          <tr>
+            <td></td>
+            <td>Categories</td><td></td>
+            <td>Menus</td><td></td>
+            <td>Brand</td><td></td>
+            <td>Cart</td><td></td>
+            <td>Location</td><td></td>
+            <td>Payment</td><td></td>
+            <td>Pending</td>
+            <td></td>
+          </tr>
+        </table>
+      </div>
+    </div>
+    <!-- 
+    <script src="jquery/js/jquery-1.9.0.min.js"></script>
+    <script src="jquery/js/jquery-ui-1.10.0.custom.min.js"></script> -->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.0.0/jquery.min.js"></script>
+    <script src="https://www.gstatic.com/firebasejs/3.6.2/firebase.js"></script>
+    <script src="./topbar.js"></script>
+  </body>
+</html>

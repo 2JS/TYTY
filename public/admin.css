@@ -1,0 +1,27 @@
+table {
+    border-collapse: collapse;
+    margin-top: 20px;
+    margin-left: 20px;
+}
+
+th {
+    padding: 5px;
+    height: 17px;
+}
+
+tr {
+    height: 17px;
+}
+
+td {
+    padding: 5px;
+    border-bottom: 1px solid #c5c5c5;
+}
+
+#header-row {
+    border-bottom: 2px solid black;
+}
+
+.header {
+    text-align: left;
+}

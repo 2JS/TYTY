@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>category</title>
+	<meta charset="utf-8">
+	<link rel="stylesheet"  href="category.css">
+</head>
+<body>
+	<iframe src="./Topbar_colored/topbar.html" width="100%" style="position: fixed; top:0"></iframe>
+	<div id="columns" style="margin-top: 160px;">
+  		
+  		<form id="category_button">
+			<input type="image" id="chicken" src="image/category_chicken.png" onclick= "onSelectCategory('chicken'); return false;"  width=100%>
+		</form>
+
+		<form id="category_button">
+			<input type="image" id="pizza" src="image/category_pizza.png" onclick= "onSelectCategory('pizza'); return false;" width=100%>
+		</form>
+		
+		<form id="category_button">
+			<input type="image" id="rice" src="image/category_rice.png" onclick= "onSelectCategory('rice'); return false;" width=100%>
+		</form>
+		
+		<form id="category_button">
+			<input type="image" id="pork" src="image/category_pork.png" onclick= "onSelectCategory('pork'); return false;" width=100%>
+		</form>
+		
+		<form id="category_button">
+			<input type="image" id="snack" src="image/category_snack.png" onclick= "onSelectCategory('snack'); return false;" width=100%>
+		</form>
+		
+		<form id="category_button">
+			<input type="image" id="chinese" src="image/category_chinese.png" onclick= "onSelectCategory('chinese'); return false;" width=100%>
+		</form>
+
+	
+	</div>
+
+</body>
+
+<script src="https://www.gstatic.com/firebasejs/4.13.0/firebase.js"></script> 
+<script src="https://hci-tutorial-53aa8.firebaseapp.com/database.js"></script>
+<script type="text/javascript" src= "category.js"></script>
+
+</html>

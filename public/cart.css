@@ -1,0 +1,157 @@
+body, html {
+  height: 100%;
+  width: 100%;
+}
+
+#title {
+    font-family: 'Mina', sans-serif;
+    font-size: 20px;
+    /*font-family: 'Shadows Into Light', cursive;*/
+}
+
+.main_outside {
+    display: block;
+    width:100%;
+    justify-content:center;
+}
+
+.main_table_wrapper {
+    display: block;
+    width:100%;
+    /*padding: 10px;*/
+    width: auto;
+/*    display: flex;
+    justify-content:center;*/
+
+}
+
+/*.main_table { 
+    width: 210px;
+    display: flex;
+    justify-content:center;	
+}*/
+
+#navigator {
+    padding: 50px;
+    width: 400px;
+    height: 150px;
+    margin: 0 auto;
+}
+
+#navigator_text {
+    text-align: center;
+}
+
+#order{
+      width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:center;	
+}
+
+#order_button_wrapper {
+      width: 100%;
+    height: auto;
+    display: flex;
+    justify-content:center;	
+}
+
+.table_header {
+    font-family: 'Mina', sans-serif;
+    font-size: 30px;
+}
+
+.selection_table {
+      width: 100%;
+    /*position:absolute;*/
+    /*width:640px;*/
+    /*display: flex;*/
+    justify-content:center;	
+      padding: 15px;
+}
+
+.row {
+      width: 100%;
+    background: #fefefe;
+    transition: background-color 0.5s;
+    border: 2px solid #fcfcfc;
+    box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+    margin: 0 2px 15px;
+    /*padding: 15px;*/
+    transition: opacity .01s ease-in-out;
+    /*display: inline-block;*/
+    column-break-inside: avoid;
+}
+
+.cell {
+    /*padding: 10px;*/
+    padding: 14px 16px;
+}
+
+
+#navbar div.active {
+  float: center;
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #4CAF50;
+  font-size: 17px;
+}
+
+#navbar a:hover {
+  /*background-color: #ddd;*/
+  color: black;
+}
+
+.sticky {
+  transition: opacity 1s ease-in-out;
+  width: 100%;
+  /*display: block;*/
+  position: fixed;
+  top: 0;
+  left: 0;
+  /*width: 100%;*/
+}
+
+.sticky + .selection_table{
+  width: 100%;
+  padding-top: 60px; /*after fixing sticky element on top of the page, making below elements to be right place by padding it => in this case, 60px = ORDER button's height(60)*/ 
+}
+
+.select_tr {
+    float:right;
+}
+
+.item_img {
+    width: 200px;
+    /*content:url("./source/1772.jpg");*/
+}
+
+.count {
+    width:100px;
+    height: 40px;
+    float: right;
+}
+
+.minus {
+    /*float: left;*/
+    width: 30px;
+    height: 30px;
+    /*content:url("./source/minus.png");*/
+}
+
+.plus {
+    /*float: right;*/
+    width: 30px;
+    height: 30px;
+   /* content:url("./source/plus.png");*/
+}
+
+.center {
+    /*float: center;*/
+    text-align: center;
+    width: 30px;
+    height: 30px;
+}

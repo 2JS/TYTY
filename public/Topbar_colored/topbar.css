@@ -1,0 +1,30 @@
+body {
+    /*background-color: #3182D9;*/
+    background-color: #eee;
+}
+
+table {
+	text-align: center;
+	/*background-color: #3182D9;*/
+	table-layout: fixed;
+	/*width: 50%;*/
+}
+
+th {
+	font-size: 28pt;
+	font-family: "Arial";
+	color: white;
+}
+
+td {
+	min-width: 75px;
+	font-size: 14pt;
+	font-family: "Arial";
+	color: white;
+}
+
+button {
+	/*background-color: #3182D9;*/
+	border: none;
+}
+

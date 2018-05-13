@@ -1,0 +1,30 @@
+img {
+    width: 70%;
+    margin-left: 15%;
+    margin-top: 25%;
+    margin-bottom: 50px;
+}
+
+h4 {
+    margin-top: 0px;
+    margin-bottom: 0px;
+    font-size: 60pt;
+    text-align: center;
+}
+
+button {
+    margin-left: 15%;
+    margin-top: 70px;
+    width: 70%;
+    height: 100px;
+    border: 0px;
+    background-color: #ff977b;
+    border-radius: 50px;
+    color: white;
+    font-size: 50px;
+    font-family: 'Do Hyeon';
+}
+
+button:focus {
+    outline: none;
+}

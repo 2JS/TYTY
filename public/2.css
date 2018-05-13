@@ -1,0 +1,141 @@
+@font-face{font-family:'Calluna';
+ src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');
+}
+
+body {
+	background: url(//subtlepatterns.com/patterns/scribble_light.png);
+  	font-family: Calluna, Arial, sans-serif;
+  	min-height: 1000px;
+}
+
+#columns {
+	column-width: 640px;
+	column-gap: 5px;
+  	width: 90%;
+	max-width: 1100px;
+	margin: 50px auto;
+}
+
+div#columns figure {
+	background: #fefefe;
+	border: 2px solid #fcfcfc;
+	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
+	margin: 0 2px 15px;
+	padding: 15px;
+	padding-bottom: 0px;
+	transition: opacity .01s ease-in-out;
+ 	display: inline-block;
+  	column-break-inside: avoid;
+}
+
+div#columns figure img {
+
+	width: 25%; height: auto;
+	float:left;
+	border-bottom: 1px solid #ccc;
+	padding-bottom: 0px;
+	margin-bottom: 15px;
+}
+
+div#columns figure figcaption {
+
+  	font-size: 1.8rem;
+	color: #444;
+  	line-height: 1.5;
+  	margin: 5px 165px;
+
+}
+.price{
+	font-size:1.4rem;
+	margin: 5px 0px 0px 320px;
+
+}
+.runtime{
+	font-size:1.4rem;
+	margin: 5px 0px 0px 320px;
+}
+
+.button{
+	float:right;
+	margin: 0px 0px 5px;
+	background-color: #f40000;
+	border: medium none;
+	border-radius: 15px;
+	color : #fff;
+	font-size: 25px;
+	padding: 10px 15px;
+	transition: all 0.5s ease 0s;
+
+}
+
+
+/*div#columns:hover figure:hover {
+	transform: scale(1.2);
+}
+*/
+
+div#columns:hover figure:not(:hover) {
+	opacity: 0.4;
+
+}
+
+body {
+    background-image: url(http://p1.pichost.me/i/11/1344899.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    font-family: Arial, sans-serif;
+    font-weight: bold;
+    font-size: 14px;
+}
+
+#button{
+
+}
+/*.wrap {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -86px;
+    margin-left: -89px;
+    text-align: center;
+}
+
+a {
+    -webkit-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -moz-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -ms-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    -o-transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    transition: all 200ms cubic-bezier(0.390, 0.500, 0.150, 1.360);
+    display: block;
+    margin: 20px auto;
+    max-width: 180px;
+    text-decoration: none;
+    border-radius: 4px;
+    padding: 20px 30px;
+}
+
+a.button {
+
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+a.button:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 0px 0px 40px inset;
+}
+
+a.button2 {
+    color: rgba(30, 22, 54, 0.6);
+    box-shadow: rgba(30, 22, 54, 0.4) 0 0px 0px 2px inset;
+}
+
+a.button2:hover {
+    color: rgba(255, 255, 255, 0.85);
+    box-shadow: rgba(30, 22, 54, 0.7) 0 80px 0px 2px inset;
+}*/
+
+@media screen and (max-width: 750px) { 
+  #columns { column-gap: 0px; }
+  #columns figure { width: 100%; }
+}
