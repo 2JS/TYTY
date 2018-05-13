@@ -5,15 +5,11 @@ let links = ['categories.html', 'menus.html', 'brand.html', 'cart.html', 'locati
 
 let images = ['service_bell', 'meal', 'restaurant_building', 'shopping_cart', 'marker', 'bank_cards', 'indeterminate_checkbox']
 
-$( document ).ready(function() {
-	// console.log("Hello")
-});
-
 function onTopClick(id) {
 	console.log(id + " clicked")
 	for (i = 0; i < images.length; i++) {
 		document.getElementById(i).src = 'assets/icons8-' + images[i] + ((i == id) ? '_filled' : '') + '.png'
 	}
 
-	document.getElementById(id).focus()
+	document.getElementById('topbar').scrollLeft = 200 * id
 }
