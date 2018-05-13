@@ -28,3 +28,10 @@ button {
 	border: none;
 }
 
+img.topbarIcon {
+	width: 150px;
+}
+
+img[src="assets/icons8-forward_filled.png"] {
+	width: 50px;
+}
