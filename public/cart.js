@@ -20,16 +20,15 @@ auth.signInAnonymously().then(function(user) {
 
 	database.ref('users/'+user.uid).once('value').then(function(snapshot){
 		category = snapshot.val().category;
-		selected_menu = snapshot.val().menu;
+		selected_menu = snapshot.val().menu || [];
 		brand = snapshot.val().brand;
 		console.log(category)
 		console.log(selected_menu)
 		console.log(brand)
 
-		for(i=0; i<selected_menu.length; i++){
-			
-			var menu = selected_menu[i]
-			console.log(menu)
+		snapshot.child('menu').forEach(function(childSnapshot) {
+			var menu = childSnapshot.val()
+
 			database.ref('list/'+category+'/'+menu).once('value').then(function(snapshot){
 				console.log(category)
 				console.log(menu)
