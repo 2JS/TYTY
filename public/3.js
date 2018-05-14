@@ -69,7 +69,7 @@ function onSelectMenu(menu){
   console.log(user.uid)
   
   
-  window.location.href = "https://cs374-tyty.firebaseapp.com/2.html"
+  window.location.href = "2.html"
 }
 
 
