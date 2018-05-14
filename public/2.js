@@ -83,7 +83,7 @@ function onSelectBrand(brand){
   console.log(user.uid)
   
   
-  window.location.href = "https://cs374-tyty.firebaseapp.com/cart.html"
+  window.location.href = " cart.html"
 }
 
 

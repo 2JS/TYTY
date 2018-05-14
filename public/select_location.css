@@ -9,8 +9,8 @@ body {
 
 #container {
   background-color: #333;
-  height:700px;
-  width:1500px;
+  height:100%;
+  width:100%;
   overflow:hidden; 
   position:relative;
 }
@@ -33,11 +33,11 @@ body {
    left: 10px;
 }
 
-#current_loc_button {
+/*#current_loc_button {
    position: absolute;
    top: 10px;
    left: 10px;
-}
+}*/
 
 #table_wrapper{
   position: relative;
