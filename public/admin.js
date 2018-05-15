@@ -6,6 +6,11 @@ var config = {
     apiKey: "AIzaSyCgsjwYO1yXyHFGfhv5vQoyRGu41VCV6yY",
     databaseURL: "https://cs374-tyty.firebaseio.com/"
 }
+
+firebase.initializeApp(config)
+
+var database = firebase.database()
+
 var orderRef = database.ref('users')
 
 orderRef.on('value', function(snapshot) {

@@ -1,14 +1,10 @@
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {refreshOrderButtonPosition()};
 
-var navbar = document.getElementById("navbar");
-// var sticky = 565; 	
-var sticky = navbar.offsetTop;
-var init = 1;
+var navbar = document.getElementById("navbar")
+var selected = document.getElementById('selected')
 
-// console.log(sticky);
-
-function myFunction() {
-  if (window.pageYOffset >= sticky) {
+function refreshOrderButtonPosition() {
+  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 200) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
@@ -306,21 +302,15 @@ function selectable_elem_plus(x) {
 function move_to_selected(tr) {
 	var selected = document.getElementById("selected");
 	selected.appendChild(tr);
-	// sticky = navbar.offsetTop;
-	if (init == 0)
-	{			sticky = navbar.offsetTop;
-	console.log(sticky);}
-	// init = 0;
+	
+	refreshOrderButtonPosition()
 }
 
 function move_to_selectable(tr) {
 	var selectable = document.getElementById("selectable");
 	selectable.insertBefore(tr, selectable.firstChild);
-	// sticky = navbar.offsetTop;
-	if (init == 0)
-	{			sticky = navbar.offsetTop;
-	console.log(sticky);}
-	// init = 0;
+	
+	refreshOrderButtonPosition()
 }
 
 function plus(p) {

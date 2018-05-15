@@ -5,6 +5,8 @@ let links = ['categories.html', 'menus.html', 'brand.html', 'cart.html', 'locati
 
 let images = ['service_bell', 'meal', 'restaurant_building', 'shopping_cart', 'marker', 'bank_cards', 'indeterminate_checkbox']
 
+let topbar = document.getElementById('topbar')
+
 function onTopClick(id) {
 	console.log(id + " clicked")
 	for (i = 0; i < images.length; i++) {
@@ -14,4 +16,5 @@ function onTopClick(id) {
 	document.getElementById('topbar').scrollLeft = 200 * id
 	
 	// window.location.href = 'https://cs374-tyty.firebaseapp.com/index.html'
+	parent.location.href = "../index.html";
 }

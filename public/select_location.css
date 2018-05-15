@@ -17,11 +17,13 @@ body {
 
 .box {
   overflow:hidden;
-  background-image: url(http://www.kaist.ac.kr/camtour/kr/images/kaist/drag_map_bg.jpg);
+  background-image: url(https://www.kaist.ac.kr/camtour/kr/images/kaist/drag_map_bg.jpg);
   background-size: 100%;
   background-position: center;
   width: 2128px;
   height: 1306px;
+  /* width: 100%; */
+  /* height: 100%; */
   position: relative;
 /*  left: -300px;
   top: -100px; */
