@@ -1,15 +1,10 @@
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {refreshOrderButtonPosition()};
 
-var navbar = document.getElementById("navbar");
-var selectable = document.getElementById('selectable')
-// var sticky = 565; 	
-var sticky = navbar.offsetTop;
-var init = 1;
+var navbar = document.getElementById("navbar")
+var selected = document.getElementById('selected')
 
-// console.log(sticky);
-
-function myFunction() {
-  if (window.pageYOffset >= selectable.offsetTop - navbar.offsetHeight) {
+function refreshOrderButtonPosition() {
+  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 200) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
@@ -23,13 +18,6 @@ auth.signInAnonymously().then(function(user) {
 	var selected_menu = [];
 	var brand;
 	console.log(user.uid)
-
-	
-
-	// database.ref('users/'+user.uid+'/menu').on('value', function(snapshot){
-	// 	sticky = navbar.offsetTop;
-	// 	console.log(sticky);
-	// })
 
 	database.ref('users/'+user.uid).once('value').then(function(snapshot){
 		category = snapshot.val().category;
@@ -105,89 +93,8 @@ auth.signInAnonymously().then(function(user) {
 				tr.appendChild(td)
 
 				document.getElementById('selected').appendChild(tr)
-				sticky = navbar.offsetTop
 			})
-			// if (init == 0)
-			// {			
-				// sticky = navbar.offsetTop;
-				// console.log(sticky);
-			// }
-	
 		})
-
-		// for(i=0; i<selected_menu.length; i++){
-			
-		// 	var menu = selected_menu[i]
-		// 	console.log(menu)
-		// 	database.ref('list/'+category+'/'+menu).once('value').then(function(snapshot){
-		// 		console.log(category)
-		// 		console.log(menu)
-				
-		// 		var value = snapshot.val();
-		// 		var tr = document.createElement('tr');
-		// 		tr.setAttribute('class', 'row')
-
-		// 		var td = document.createElement('td');
-		// 		td.setAttribute('id','selected_elem');
-		// 		td.setAttribute('class','cell');
-
-				
-		// 		console.log(menu)
-		// 		var img = document.createElement('img');
-		// 		img.src = value['image']
-				
-		// 		img.setAttribute('class','item_img')
-
-		// 		var span = document.createElement('span');
-		// 		span.innerHTML=menu
-
-		// 		var table = document.createElement('table')
-		// 		table.setAttribute('class','count');
-
-		// 		var table_tr = document.createElement('tr')
-		// 		table_tr.setAttribute('class','select_tr')
-
-		// 		var minus_td = document.createElement('td')
-		// 		var minus_img = document.createElement('img')
-		// 		minus_img.setAttribute('class','minus')
-		// 		minus_img.setAttribute('onclick','minus(this)')
-		// 		minus_img.setAttribute('style','cursor:pointer')
-		// 		minus_img.src = "./source/minus.png"
-		// 		minus_td.appendChild(minus_img);
-
-		// 		var number_td = document.createElement('td')
-		// 		var number_div = document.createElement('div')
-		// 		number_div.setAttribute('class','center')
-		// 		number_div.innerHTML = 1;
-		// 		number_td.appendChild(number_div);
-
-		// 		var plus_td = document.createElement('td')
-		// 		var plus_img = document.createElement('img')
-		// 		plus_img.setAttribute('class','plus')
-		// 		plus_img.setAttribute('onclick','plus(this)')
-		// 		plus_img.setAttribute('style','cursor:pointer')
-		// 		plus_img.src="./source/plus.png"
-		// 		plus_td.appendChild(plus_img)
-
-		// 		table_tr.appendChild(minus_td)
-		// 		table_tr.appendChild(number_td)
-		// 		table_tr.appendChild(plus_td)
-
-		// 		table.appendChild(table_tr)
-
-		// 		td.appendChild(img)
-		// 		td.appendChild(span)
-		// 		td.appendChild(table)
-
-		// 		tr.appendChild(td)
-
-		// 		document.getElementById('selected_body').appendChild(tr)
-		// 	})
-		// 	// img.src = snapshot.child(selected_menu).val()['image'];
-			
-			
-		// }
-
 
 		database.ref('list/'+category).once('value').then(function(snapshot) {
 			snapshot.forEach(function(childSnapshot) {
@@ -238,13 +145,7 @@ auth.signInAnonymously().then(function(user) {
 				}	
 				console.log("selectable done");
 			})
-			// if (init == 0)
-			// {			
-				// sticky = navbar.offsetTop;
-				// console.log(sticky);
-			// }
 		})
-		init = 0;
 	})
 })	
 
@@ -307,21 +208,15 @@ function selectable_elem_plus(x) {
 function move_to_selected(tr) {
 	var selected = document.getElementById("selected");
 	selected.appendChild(tr);
-	// sticky = navbar.offsetTop;
-	if (init == 0)
-	{			sticky = navbar.offsetTop;
-	console.log(sticky);}
-	// init = 0;
+	
+	refreshOrderButtonPosition()
 }
 
 function move_to_selectable(tr) {
 	var selectable = document.getElementById("selectable");
 	selectable.insertBefore(tr, selectable.firstChild);
-	// sticky = navbar.offsetTop;
-	if (init == 0)
-	{			sticky = navbar.offsetTop;
-	console.log(sticky);}
-	// init = 0;
+	
+	refreshOrderButtonPosition()
 }
 
 function plus(p) {

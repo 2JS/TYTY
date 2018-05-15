@@ -52,7 +52,7 @@ function draw_pin(x, y, loc_name, brand) { //example: x, y, loc_name = 810px, 16
    pin.style.top = y; //y
    // pin.setAttribute('left',x); 
    // pin.setAttribute('top',y); 
-   table.appendChild(pin);   
+   table.appendChild(pin); 
    return;
 }
 
@@ -78,7 +78,8 @@ var pin_data_pairs;
 
 function parse_pin_data(brand) {
    pin_list = [];
-   var idx = 0;   
+   var idx = 0;
+   console.log((Object.entries(pin_data_pairs)[idx][1]["Coordinate"]+","+Object.entries(pin_data_pairs)[idx][1]["Brand"]).split(",")); 
    switch(brand)
    {
       case("all"):
@@ -238,7 +239,7 @@ function button_click(x) {
 //     // calc_current_px(36.370463, 127.360012); //w8
 //     // calc_current_px(36.373504, 127.360506); //lottelia
 //     // calc_current_px(36.369685, 127.369175); // papalado
-//  //       var degree = 29.489;
+//  //      var degree = 29.489;
 //    // var cosine = Math.cos(degree/180 * Math.PI);
 //    // var sine = Math.sin(degree/180 * Math.PI);
 //    // console.log(cosine, sine);
@@ -266,7 +267,7 @@ function button_click(x) {
 //    var c_x_rotated = ((current_x - origin_x)*cosine) - ((current_y - origin_y)*sine);
 //    var c_y_rotated = ((current_x - origin_x)*sine) + ((current_y - origin_y)*cosine);
 //    var p_x = (c_x_rotated/origin_w)*(1800-300) + 300;
-//    // console.log("own_p_x = ", (c_x_rotated/0.0115985)*(1800-300) + 300);   
+//    // console.log("own_p_x = ", (c_x_rotated/0.0115985)*(1800-300) + 300); 
 //    var p_y = (1-(c_y_rotated/origin_y))*(1100-160)-160; //1100-160
 
 //    console.log("p_x=",p_x,"p_y=",p_y);
@@ -288,7 +289,7 @@ function button_click(x) {
 //    pin.style.left = x; //x
 //    pin.style.top = y; //y
 //    div.appendChild(pin)
-//    table.appendChild(div);   
+//    table.appendChild(div); 
 //    return;
 // }
 
@@ -392,3 +393,4 @@ function get_brand() {
 //       updateHistory();
 //    });
 // }
+
