@@ -1,10 +1,15 @@
 window.onscroll = function() {myFunction()};
 
-var navbar = document.getElementById("navbar")
-var selected = document.getElementById('selected')
+var navbar = document.getElementById("navbar");
+var selectable = document.getElementById('selectable')
+// var sticky = 565; 	
+var sticky = navbar.offsetTop;
+var init = 1;
+
+// console.log(sticky);
 
 function myFunction() {
-  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight) {
+  if (window.pageYOffset >= selectable.offsetTop - navbar.offsetHeight) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
