@@ -90,6 +90,12 @@ body, html {
     padding: 14px 16px;
 }
 
+#navbar {
+  position: sticky;
+  top: 240px;
+  bottom: 0px;
+}
+
 #navbar div.active {
   float: center;
   display: block;

@@ -1,16 +1,5 @@
-window.onscroll = function() {refreshOrderButtonPosition()};
-
 var navbar = document.getElementById("navbar")
 var selected = document.getElementById('selected')
-
-function refreshOrderButtonPosition() {
-  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 240) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
 
 auth.signInAnonymously().then(function(user) {
 	console.log(user.uid)
@@ -100,7 +89,6 @@ auth.signInAnonymously().then(function(user) {
 				tr.appendChild(td)
 
 				document.getElementById('selected').appendChild(tr)
-				sticky = navbar.offsetTop
 			})
 			// if (init == 0)
 			// {			
@@ -233,13 +221,7 @@ auth.signInAnonymously().then(function(user) {
 				}	
 				console.log("selectable done");
 			})
-			// if (init == 0)
-			// {			
-				// sticky = navbar.offsetTop;
-				// console.log(sticky);
-			// }
 		})
-		init = 0;
 	})
 })	
 
@@ -302,15 +284,11 @@ function selectable_elem_plus(x) {
 function move_to_selected(tr) {
 	var selected = document.getElementById("selected");
 	selected.appendChild(tr);
-	
-	refreshOrderButtonPosition()
 }
 
 function move_to_selectable(tr) {
 	var selectable = document.getElementById("selectable");
 	selectable.insertBefore(tr, selectable.firstChild);
-	
-	refreshOrderButtonPosition()
 }
 
 function plus(p) {
