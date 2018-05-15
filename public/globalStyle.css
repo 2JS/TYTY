@@ -9,3 +9,13 @@ iframe {
 body {
 	margin-top: 250px;
 }
+
+.topSticky {
+	position: sticky;
+	top: 240px;
+}
+
+.bottomSticky {
+	position: sticky;
+	bottom: 0;
+}
