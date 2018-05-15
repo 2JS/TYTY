@@ -4,7 +4,7 @@ var navbar = document.getElementById("navbar")
 var selected = document.getElementById('selected')
 
 function myFunction() {
-  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight) {
+  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 200) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");

@@ -35,3 +35,9 @@ img.topbarIcon {
 img[src="assets/icons8-forward_filled.png"] {
 	width: 50px;
 }
+
+#topbar {
+	height: 200px;
+	overflow: scroll;
+	margin-top: 0%;
+}
