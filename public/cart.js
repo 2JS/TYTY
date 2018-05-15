@@ -302,10 +302,6 @@ function selectable_elem_plus(x) {
 function move_to_selected(tr) {
 	var selected = document.getElementById("selected");
 	selected.appendChild(tr);
-	// sticky = navbar.offsetTop;
-	if (init == 0)
-	{			sticky = navbar.offsetTop;
-	console.log(sticky);}
 	
 	refreshOrderButtonPosition()
 }
@@ -313,10 +309,6 @@ function move_to_selected(tr) {
 function move_to_selectable(tr) {
 	var selectable = document.getElementById("selectable");
 	selectable.insertBefore(tr, selectable.firstChild);
-	// sticky = navbar.offsetTop;
-	if (init == 0)
-	{			sticky = navbar.offsetTop;
-	console.log(sticky);}
 	
 	refreshOrderButtonPosition()
 }
