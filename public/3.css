@@ -3,15 +3,6 @@
  src: url(BMJUA_otf.otf), url(BMJUA_ttf.tff);
 }
 
-
-#navigator{
-	
-	height:160px;
-
-}
-
-
-
 #columns {
 	column-width: 320px;
 	column-gap: 2px;
