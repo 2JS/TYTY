@@ -14,4 +14,5 @@ function onTopClick(id) {
 	document.getElementById('topbar').scrollLeft = 200 * id
 	
 	// window.location.href = 'https://cs374-tyty.firebaseapp.com/index.html'
+	parent.location.href = "../index.html";
 }
