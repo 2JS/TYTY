@@ -4,7 +4,7 @@ var navbar = document.getElementById("navbar")
 var selected = document.getElementById('selected')
 
 function refreshOrderButtonPosition() {
-  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 200) {
+  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 240) {
     navbar.classList.add("sticky")
   } else {
     navbar.classList.remove("sticky");
