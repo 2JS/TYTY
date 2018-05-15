@@ -1,0 +1,40 @@
+#wrapper {
+    background-color: black;
+    color: #ff977b;
+    width: 100%;
+    height: 100vh;
+}
+
+span {
+    display: inline-block;
+    font-size: 60px;
+    /* Safari */
+    -webkit-transform: rotate(-90deg);
+    /* Firefox */
+    -moz-transform: rotate(-90deg);
+    /* IE */
+    -ms-transform: rotate(-90deg);
+    /* Opera */
+    -o-transform: rotate(-90deg);
+    /* Internet Explorer */
+    filter: progid:DXImageTransform.Microsoft.BasicImage(rotation=3);
+}
+
+#me {
+    /* margin-top: 20px; */
+    /* bottom: 0; */
+    /* margin-right: 20px; */
+    /* float: left; */
+}
+
+#brand {
+
+}
+
+#store {
+
+}
+
+#person {
+    
+}

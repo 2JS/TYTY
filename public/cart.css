@@ -72,6 +72,7 @@ body, html {
 
 .row {
       width: 100%;
+      height: auto;
     background: #fefefe;
     transition: background-color 0.5s;
     border: 2px solid #fcfcfc;
@@ -98,6 +99,7 @@ body, html {
   text-decoration: none;
   background-color: #4CAF50;
   font-size: 17px;
+  left: 0;
 }
 
 #navbar a:hover {
