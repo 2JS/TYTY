@@ -1,9 +1,9 @@
-window.onscroll = function() {myFunction()};
+window.onscroll = function() {refreshOrderButtonPosition()};
 
 var navbar = document.getElementById("navbar")
 var selected = document.getElementById('selected')
 
-function myFunction() {
+function refreshOrderButtonPosition() {
   if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 200) {
     navbar.classList.add("sticky")
   } else {
@@ -306,7 +306,8 @@ function move_to_selected(tr) {
 	if (init == 0)
 	{			sticky = navbar.offsetTop;
 	console.log(sticky);}
-	// init = 0;
+	
+	refreshOrderButtonPosition()
 }
 
 function move_to_selectable(tr) {
@@ -316,7 +317,8 @@ function move_to_selectable(tr) {
 	if (init == 0)
 	{			sticky = navbar.offsetTop;
 	console.log(sticky);}
-	// init = 0;
+	
+	refreshOrderButtonPosition()
 }
 
 function plus(p) {
