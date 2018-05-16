@@ -9,9 +9,6 @@ let topbar = document.getElementById('topbar')
 
 function onTopClick(id) {
 	console.log(id + " clicked")
-	for (i = 0; i < images.length; i++) {
-		document.getElementById(i).src = 'assets/icons8-' + images[i] + ((i == id) ? '_filled' : '') + '.png'
-	}
 
 	// document.getElementById('topbar').scrollLeft = 200 * id
 	
