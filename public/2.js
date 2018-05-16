@@ -2,17 +2,50 @@ var userRef = database.ref('users');
 var profile_list = [];
 
 userRef.on('value',function(snapshot){
-  var userProfile = snapshot.val()
-  profile_list = Object.values(userProfile)
-  console.log(profile_list)
-  
-}
-)
+	var userProfile = snapshot.val()
+	profile_list = Object.values(userProfile)
+	console.log(profile_list)
+})
 
 
 var category_name;
 var image
 var menu_list=[];
+
+let menuTable = document.getElementById('menuTable')
+
+function brandRow(brand, data) {
+	var row = document.createElement('tr')
+	var imgCell = row.insertCell(0)
+	var dataCell = row.insertCell(1)
+	var buttonCell = row.insertCell(2)
+
+	var img = document.createElement('img')
+
+	img.src = data['image']
+	img.alt = 'failed to<br/>load image'
+	img.width = 300
+
+	imgCell.appendChild(img)
+	imgCell.width = 300
+
+	var brandtext = document.createElement('span')
+	brandtext.innerHTML = brand
+	brandtext.style = 'font-size: 60pt'
+
+	dataCell.innerHTML = brandtext.outerHTML + '<br/>' + data['price'] + '<br/>' + data['runtime']
+	dataCell.style = 'font-size: 40pt; font-family:"Do Hyeon";'
+
+	buttonCell.innerHTML = 'Add to<br/>Cart' // change this to img in future
+	buttonCell.style = 'text-align: center; background-color:#fa4e2d; font-family:"Do Hyeon"; font-size: 40pt; color: white;'
+
+	// click call
+	row.id = brand
+	row.setAttribute('onclick', 'onSelectBrand("' + brand + '")')
+	buttonCell.setAttribute('onclick', 'onAddToCart("' + brand + '")')
+
+	return row
+}
 
 auth.signInAnonymously().then(function(user) {
 	var category;
@@ -28,62 +61,56 @@ auth.signInAnonymously().then(function(user) {
 				var brand = childSnapshot.key
 				var value = childSnapshot.val()
 
-				var figure = document.createElement('figure')
-				// figure.setAttribute('onclick', 'onSelectMenu("' + menu + '"); return false; ')
+				// document.getElementById('columns').appendChild(brandFigure(brand, value))
 
-				var img = document.createElement('img')
-				img.src = value['image']
-
-				var figcaption = document.createElement('figcaption')
-				figcaption.style = "font-family: BMJUA"
-
-				figcaption.innerHTML = brand
-
-				var price = document.createElement('p')
-				price.setAttribute('class', 'price')
-				price.innerHTML = value['price']
-
-				var runtime = document.createElement('p')
-				runtime.setAttribute('class','runtime')
-				runtime.innerHTML = value['runtime']
-
-				var button = document.createElement('button')
-				button.setAttribute('class', 'button')
-				button.setAttribute('type','button')
-				button.setAttribute('onclick', 'onSelectBrand("'+brand+'");return false;')
-				button.innerHTML = "Add Cart";
-
-
-				figcaption.appendChild(price)
-				figcaption.appendChild(runtime)
-				figure.appendChild(img)
-				figure.appendChild(figcaption)
-				figure.appendChild(button)
-
-				document.getElementById('columns').appendChild(figure)
+				menuTable.insertRow(-1).outerHTML = brandRow(brand, value).outerHTML
 			})
 		})
 	})
-})	
+})
 
-//var userId = firebase.auth().currentUser.uid;
-//return firebase.database().ref('/users/' + userId).once('value').then(function(snapshot) {
-//  var category = (snapshot.val() && snapshot.val().category) || 'Anonymous'
+function onSelectBrand(brand) {
+	row = document.getElementById(brand)
+	row.setAttribute('onclick', 'onDeselectBrand("' + brand + '")')
 
-  // ...
-//});
+	var nextRow = menuTable.insertRow(row.rowIndex + 1)
+	var imgCell = nextRow.insertCell(0)
+	var img = document.createElement('img')
 
-//console.log(category)
+	img.src = row.cells[0].childNodes[0].src
+	imgCell.setAttribute('colspan', '3')
+	imgCell.setAttribute('align', 'center')
+	// imgCell.setAttribute
+	imgCell.width = '100%'
 
+	imgCell.appendChild(img)
+	nextRow.appendChild(imgCell)
 
+	var next2Row = menuTable.insertRow(row.rowIndex + 2)
+	next2Row.innerHTML = '<td colspan="3" style="font-size:50pt; font-family: \'Do Hyeon\'; color:white; text-align: center;">Close</td>'
+	next2Row.style = 'background-color: #fa4e2d;'
+	next2Row.setAttribute('onclick', 'onDeselectBrand("' + brand + '")')
 
-function onSelectBrand(brand){
-  console.log(brand)
-  database.ref("users/"+user.uid+"/brand").set(brand);
-  console.log(user.uid)
-  
-  
-  window.location.href = " cart.html"
+	row.classList.add('topSticky')
+	next2Row.classList.add('bottomSticky')
+}
+
+function onDeselectBrand(brand) {
+	row = document.getElementById(brand)
+	row.setAttribute('onclick', 'onSelectBrand("' + brand + '")')
+
+	menuTable.deleteRow(row.rowIndex + 1)
+	menuTable.deleteRow(row.rowIndex + 1)
+
+	row.classList.remove('topSticky')
+}
+
+function onAddToCart(brand) {
+	console.log(brand)
+	database.ref("users/"+user.uid+"/brand").set(brand);
+	console.log(user.uid)
+
+	window.location.href = " cart.html"
 }
 
 

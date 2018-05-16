@@ -1,16 +1,5 @@
-window.onscroll = function() {refreshOrderButtonPosition()};
-
 var navbar = document.getElementById("navbar")
 var selected = document.getElementById('selected')
-
-function refreshOrderButtonPosition() {
-  if (window.pageYOffset >= selected.offsetTop + selected.offsetHeight - 200) {
-    navbar.classList.add("sticky")
-  } else {
-    navbar.classList.remove("sticky");
-  }
-}
-
 
 auth.signInAnonymously().then(function(user) {
 	console.log(user.uid)
@@ -208,15 +197,11 @@ function selectable_elem_plus(x) {
 function move_to_selected(tr) {
 	var selected = document.getElementById("selected");
 	selected.appendChild(tr);
-	
-	refreshOrderButtonPosition()
 }
 
 function move_to_selectable(tr) {
 	var selectable = document.getElementById("selectable");
 	selectable.insertBefore(tr, selectable.firstChild);
-	
-	refreshOrderButtonPosition()
 }
 
 function plus(p) {

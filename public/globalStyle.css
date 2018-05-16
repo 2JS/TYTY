@@ -3,5 +3,19 @@ iframe {
 	top:0;
 	left: 0;
 	right: 0;
-	height: 200px;
+	height: 240px;
+}
+
+body {
+	margin-top: 250px;
+}
+
+.topSticky {
+	position: sticky;
+	top: 240px;
+}
+
+.bottomSticky {
+	position: sticky;
+	bottom: 0;
 }
