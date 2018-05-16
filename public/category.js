@@ -1,5 +1,5 @@
 
-// console.log("top_name=",name);
+
 var userRef = database.ref('users');
 var profile_list = [];
 
@@ -56,6 +56,5 @@ function onSelectCategory(item){
 	console.log(category)
 	database.ref("users/"+user.uid+"/category").set(category)
 	console.log(user.uid)
-	// window.location.href = "https://cs374-tyty.firebaseapp.com/3.html"
-	window.location.href = "./3.html"
+	window.location.href = "https://cs374-tyty.firebaseapp.com/3.html"
 }
