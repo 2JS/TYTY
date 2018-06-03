@@ -4,4 +4,11 @@ iframe {
 	left: 0;
 	right: 0;
 	height: 200px;
+
+	overflow-x: scroll;
+	overflow-y: hidden;
+}
+
+body {
+	margin-top: 200px;
 }

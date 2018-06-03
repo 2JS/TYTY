@@ -18,7 +18,7 @@ th {
 
 td {
 	min-width: 75px;
-	font-size: 14pt;
+	font-size: 28pt;
 	font-family: "Arial";
 	color: white;
 }
@@ -29,7 +29,7 @@ button {
 }
 
 img.topbarIcon {
-	width: 150px;
+	width: 100px;
 }
 
 img[src="assets/icons8-forward_filled.png"] {
@@ -40,4 +40,24 @@ img[src="assets/icons8-forward_filled.png"] {
 	height: 200px;
 	overflow: scroll;
 	margin-top: 0%;
+}
+
+/* width */
+::-webkit-scrollbar {
+	width: 10px;
+}
+
+/* Track */
+::-webkit-scrollbar-track {
+	background: transparent;
+}
+
+/* Handle */
+::-webkit-scrollbar-thumb {
+	background: #ffffff;
+}
+
+/* Handle on hover */
+::-webkit-scrollbar-thumb:hover {
+	background: #ffffff;
 }
