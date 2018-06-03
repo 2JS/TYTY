@@ -35,13 +35,13 @@ auth.signInAnonymously().then(function(user) {
 				img.src = value['image']
 
 				var figcaption = document.createElement('figcaption')
-				figcaption.style = "font-family: BMJUA"
+				// figcaption.style = "font-family: BMJUA"
 
-				figcaption.innerHTML = brand
+				figcaption.innerHTML = "  "+brand
 
 				var price = document.createElement('p')
 				price.setAttribute('class', 'price')
-				price.innerHTML = value['price']
+				price.innerHTML = value['price']+" KRW"
 
 				var runtime = document.createElement('p')
 				runtime.setAttribute('class','runtime')
@@ -51,7 +51,7 @@ auth.signInAnonymously().then(function(user) {
 				button.setAttribute('class', 'button')
 				button.setAttribute('type','button')
 				button.setAttribute('onclick', 'onSelectBrand("'+brand+'");return false;')
-				button.innerHTML = "Add Cart";
+				button.innerHTML = "Add to Cart";
 
 
 				figcaption.appendChild(price)

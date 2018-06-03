@@ -1,28 +1,27 @@
-@font-face{font-family:'Calluna';
- src:url('https://s3-us-west-2.amazonaws.com/s.cdpn.io/4273/callunasansregular-webfont.woff') format('woff');
+@font-face{
+ font-family: BMDOHYEON;
+ src: url(BMDOHYEON_otf.otf), url(BMDOHYEON_ttf.tff);
 }
 
-body {
-	background: url(//subtlepatterns.com/patterns/scribble_light.png);
-  	font-family: Calluna, Arial, sans-serif;
-  	min-height: 1000px;
-}
+
 
 #columns {
-	column-width: 640px;
+	/*column-width: 1000px;*/
 	column-gap: 5px;
-  	width: 90%;
+  width: 100%;
 	max-width: 1100px;
-	margin: 50px auto;
+	margin: 50px 0px;
 }
 
 div#columns figure {
+
+  width: 100%;
 	background: #fefefe;
 	border: 2px solid #fcfcfc;
 	box-shadow: 0 1px 2px rgba(34, 25, 25, 0.4);
-	margin: 0 2px 15px;
-	padding: 15px;
-	padding-bottom: 0px;
+	margin: 0px 2px 10px;
+	padding: 15px 0px 0px 15px;
+	
 	transition: opacity .01s ease-in-out;
  	display: inline-block;
   	column-break-inside: avoid;
@@ -30,39 +29,42 @@ div#columns figure {
 
 div#columns figure img {
 
-	width: 25%; height: auto;
+	width: 33%; height: auto;
 	float:left;
 	border-bottom: 1px solid #ccc;
 	padding-bottom: 0px;
 	margin-bottom: 15px;
+  margin-right: 15px;
 }
 
 div#columns figure figcaption {
-
-  	font-size: 1.8rem;
-	color: #444;
+  font-family: 'Do Hyeon';
+  	font-size: 5rem;
+	/* color: #444; */
   	line-height: 1.5;
-  	margin: 5px 165px;
+  	margin: 5px 165px 5px 220px;
 
 }
 .price{
-	font-size:1.4rem;
-	margin: 5px 0px 0px 320px;
+	font-size:2.5rem;
+	margin: 5px 0px 0px 15px;
+  margin-top: 15px;
 
 }
 .runtime{
-	font-size:1.4rem;
-	margin: 5px 0px 0px 320px;
+	font-size:2.5rem;
+	margin: 5px 0px 0px 15px;
 }
 
 .button{
 	float:right;
-	margin: 0px 0px 5px;
-	background-color: #f40000;
+	margin-right:25px;
+  margin-bottom: 30px;
+	background-color: #fa4e2d;
 	border: medium none;
 	border-radius: 15px;
 	color : #fff;
-	font-size: 25px;
+	font-size: 3.3rem;
 	padding: 10px 15px;
 	transition: all 0.5s ease 0s;
 
@@ -80,12 +82,17 @@ div#columns:hover figure:not(:hover) {
 }
 
 body {
-    background-image: url(http://p1.pichost.me/i/11/1344899.jpg);
-    background-size: cover;
-    background-repeat: no-repeat;
+    /*background-image: url(http://p1.pichost.me/i/11/1344899.jpg);*/
+    /*background-size: cover;*/
+    /*background-repeat: no-repeat;*/
+    width: 100vw;
+    height: 100vh;
     font-family: Arial, sans-serif;
     font-weight: bold;
     font-size: 14px;
+    /* background-color: gray; */
+    min-height: 1000px;
+    margin: 0px;
 }
 
 #button{

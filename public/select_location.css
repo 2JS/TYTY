@@ -4,26 +4,26 @@ body, html {
 }
 
 body {
-  background-color:black;
+  /*background-color:black;*/
 }
 
 #container {
-  background-color: #333;
+  /*padding-top: 250px;*/
+  /*background-color: #333;*/
   height:100%;
   width:100%;
   overflow:hidden; 
+  /*overflow: scroll;*/
   position:relative;
 }
 
 .box {
   overflow:hidden;
-  background-image: url(https://www.kaist.ac.kr/camtour/kr/images/kaist/drag_map_bg.jpg);
+  background-image: url(http://www.kaist.ac.kr/camtour/kr/images/kaist/drag_map_bg.jpg);
   background-size: 100%;
   background-position: center;
   width: 2128px;
   height: 1306px;
-  /* width: 100%; */
-  /* height: 100%; */
   position: relative;
 /*  left: -300px;
   top: -100px; */
@@ -43,4 +43,8 @@ body {
 
 #table_wrapper{
   position: relative;
+}
+
+#out_wrapper {
+  margin-top: -20px;
 }

@@ -1,7 +1,3 @@
-@font-face{
- font-family: BMJUA;
- src: url(BMJUA_otf.otf), url(BMJUA_ttf.tff);
-}
 
 
 #navigator{
@@ -40,9 +36,10 @@ div#columns figure img {
 }
 
 div#columns figure figcaption {
+	font-family: "Do Hyeon";
 	display:block;
   	text-align: center;
-  	font-size: 2rem;
+  	font-size: 3.7rem;
 	color: #444;
   	line-height: 1.3;
 }

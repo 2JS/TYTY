@@ -33,7 +33,7 @@ auth.signInAnonymously().then(function(user) {
 				img.src = value['image']
 
 				var figcaption = document.createElement('figcaption')
-				figcaption.style = "font-family: BMJUA"
+				// figcaption.style = "font-family: BMJUA"
 
 				figcaption.innerHTML = menu
 

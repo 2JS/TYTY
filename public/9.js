@@ -21,7 +21,7 @@ orderRef.on('value', function(snapshot) {
         }
     }
     
-    if (order.delivered === 1) {
+    if (order.delivered === 2) {
         window.location.href = 'https://cs374-tyty.firebaseapp.com/10.html'
     }
 })

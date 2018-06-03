@@ -18,7 +18,7 @@ th {
 
 td {
 	min-width: 75px;
-	font-size: 14pt;
+	font-size: 30pt;
 	font-family: "Arial";
 	color: white;
 }
@@ -34,10 +34,4 @@ img.topbarIcon {
 
 img[src="assets/icons8-forward_filled.png"] {
 	width: 50px;
-}
-
-#topbar {
-	height: 200px;
-	overflow: scroll;
-	margin-top: 0%;
 }

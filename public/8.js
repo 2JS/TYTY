@@ -17,6 +17,7 @@ orderRef.on('value', function(snapshot) {
     for (var i=0; i<key_list.length; i++) {
         if (key_list[i] === user.uid) {
             order = order_list[i]
+            database.ref("users/"+ user.uid + "/delivered").set(0)
         }
     }
     

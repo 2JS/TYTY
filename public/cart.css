@@ -32,24 +32,13 @@ body, html {
     justify-content:center;	
 }*/
 
-#navigator {
-    padding: 50px;
-    width: 400px;
-    height: 150px;
-    margin: 0 auto;
-}
-
-#navigator_text {
-    text-align: center;
-}
-
 #order{
       width: 100%;
     height: auto;
     display: flex;
     justify-content:center;	
 }
-
+ 
 #order_button_wrapper {
       width: 100%;
     height: auto;
@@ -57,23 +46,19 @@ body, html {
     justify-content:center;	
 }
 
-.table_header {
-    font-family: 'Mina', sans-serif;
-    font-size: 30px;
-}
-
 .selection_table {
-      width: 100%;
+    width: 100%;
     /*position:absolute;*/
     /*width:640px;*/
     /*display: flex;*/
     justify-content:center;	
-      padding: 15px;
+    padding: 15px;
+    padding-bottom: 0;
 }
 
 .row {
-      width: 100%;
-      height: auto;
+    width: 100%;
+    height: auto;
     background: #fefefe;
     transition: background-color 0.5s;
     border: 2px solid #fcfcfc;
@@ -90,70 +75,175 @@ body, html {
     padding: 14px 16px;
 }
 
-#navbar div.active {
-  float: center;
-  display: block;
-  color: #f2f2f2;
-  text-align: center;
-  padding: 14px 16px;
-  text-decoration: none;
-  background-color: #4CAF50;
-  font-size: 17px;
-  left: 0;
-}
 
-#navbar a:hover {
-  /*background-color: #ddd;*/
-  color: black;
-}
-
-.sticky {
+/*.sticky {
   transition: opacity 1s ease-in-out;
   width: 100%;
-  /*display: block;*/
   position: fixed;
-  top: 200px;
+  top: 240px;
   left: 0;
-  /*width: 100%;*/
 }
-
-.sticky + .selection_table{
+*/
+/*.sticky + .selection_table{
   width: 100%;
-  padding-top: 60px; /*after fixing sticky element on top of the page, making below elements to be right place by padding it => in this case, 60px = ORDER button's height(60)*/ 
+  padding-top: 60px; 
 }
-
-.select_tr {
-    float:right;
-}
+*/
 
 .item_img {
     width: 200px;
+    float: left;
     /*content:url("./source/1772.jpg");*/
 }
 
 .count {
-    width:100px;
+    width:200px;
     height: 40px;
     float: right;
 }
 
 .minus {
     /*float: left;*/
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
     /*content:url("./source/minus.png");*/
 }
 
 .plus {
     /*float: right;*/
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
    /* content:url("./source/plus.png");*/
 }
 
 .center {
     /*float: center;*/
     text-align: center;
-    width: 30px;
-    height: 30px;
+    width: 80px;
+    height: 80px;
+    font-size: 60px;
+}
+
+.data_ul {
+  list-style: none;
+  font-family: 'Do Hyeon', sans-serif;
+  float: left;
+  margin: 0;
+}
+
+#li_brand {
+  font-size: 40px;
+}
+
+#li_menu {
+  font-size: 55px;
+}
+
+.li_price {
+  display: table-cell;
+  list-style: none;
+  font-family: 'Do Hyeon', sans-serif;
+  float: right;
+  font-size: 50px;
+  bottom: 0;
+  vertical-align: bottom;
+}
+
+.select_tr {
+  height: 120px;
+  float: right;
+}
+
+#navbar {
+  padding-top: 2px;
+  margin-right: 13px;
+  margin-left: 13px;
+  /*padding: 5px;*/
+}
+
+#order_button {
+  cursor: pointer;
+  height: 70px;
+  /*float: center;*/
+  display: block;
+  color: #f2f2f2;
+  text-align: center;
+  padding: 14px 16px;
+  text-decoration: none;
+  background-color: #FF4E2D;
+  font-family: 'Do Hyeon', sans-serif;
+  font-size: 50px;
+  left: 0;
+
+  border-bottom-right-radius: 40px 40px; 
+  border-bottom-left-radius: 40px 40px; 
+}
+
+#order_button:hover {
+  background-color: #ff8058;
+}
+
+#total_price {
+  height: 80px;
+  background-color: white;
+  font-family: 'Do Hyeon', sans-serif;
+  /*float: right;*/
+  padding-right: 25px;
+  font-size: 50px;
+  text-align: right;
+
+  border-left: 10px solid #FF4E2D;
+  border-right: 10px solid #FF4E2D;
+  border-top: 10px solid #FF4E2D;
+  border-bottom: 1px solid #FF4E2D;
+
+  border-top-right-radius: 40px 40px; 
+  border-top-left-radius: 40px 40px; 
+/*  outline: solid #FF4E2D;
+  outline-width: 10px;*/
+/*  margin-right: 14px;
+  margin-left: 14px;*/
+}
+
+.table_header_deco {
+  width: 5px;
+  height: 100%;
+  margin: 0;
+  background-color: #FF4E2D;
+}
+
+.header_tr {
+  /*font-family: 'Do Hyeon', sans-serif;    */
+  height: 50px;
+}
+
+.header {
+  text-align: center;
+  border-left: 10px solid #FF4E2D;
+  border-right: 10px solid #FF4E2D;
+  border-top: 10px solid #FF4E2D;
+  border-bottom: 10px solid #ffffff;
+
+  border-top-right-radius: 40px 40px; 
+  border-top-left-radius: 40px 40px; 
+}
+
+.head_text {
+  width: 50px;
+  height: 50px;
+  padding: 0;
+  font-family: 'Do Hyeon', sans-serif;    
+  font-size: 55px;
+  color: #FF4E2D;
+}
+
+.header_bottom {
+  height: 30px;
+  border-left: 10px solid #FF4E2D;
+  border-right: 10px solid #FF4E2D;
+  border-top: 10px solid #ffffff;
+  border-bottom: 10px solid #FF4E2D;
+
+  border-bottom-right-radius: 40px 40px; 
+  border-bottom-left-radius: 40px 40px; 
 }

@@ -22,9 +22,9 @@ document.getElementById("cash").onclick = function () { //go to cash page
 
 // location button
 
-document.getElementById("location").onclick = function () { //go to main page(payment_method page)
-    location.href = "./select_location.html";
-};
+// document.getElementById("location").onclick = function () { //go to main page(payment_method page)
+//     location.href = "./select_location.html";
+// };
 
 
 console.log("passed_data=",window.name);
@@ -44,13 +44,14 @@ console.log("passed_data=",window.name);
 
 // firebase.initializeApp(config);
 // var database = firebase.database();
-var usersRef = database.ref('users');
+// var usersRef = database.ref('users');
 
 // usersRef.on('value', function(snapshot) { //when the brand is updated, then go to next pages.
 	
 // });
 
 function update_payment(payment) {
+	var usersRef = database.ref('users');
 	usersRef.once('value', function(snapshot) {
 		var exists = (snapshot.val() !== null);
 		if (exists) //check if database is empt
@@ -69,7 +70,8 @@ function update_payment(payment) {
 						database.ref("users/"+user.uid+"/payment").set(payment);
 					}
 				}
-				window.location.href = "./8.html"; //go to 8th page
+				database.ref("users/"+ user.uid + "/requested").set(0)
+				window.location.href = "https://cs374-tyty.firebaseapp.com/8.html"; //go to 8th page
 			});
 		} else {
 			console.log("Firebase: any_data_exists (except undo)? ", exists);
